@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+img {
+  max-height: 380px;
+  max-width: 100%;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+  margin: 15px 0;
+  font-size: 2.2rem;
+}
+
+h1 {
+  font-size: 2.7rem;
+  margin: 2rem 0 3rem 0;
+}
+
+body {
+  background-color: #282c34;
+  color: beige;
+}
+
+.col-sm-6 {
+  padding: 15px;
+}

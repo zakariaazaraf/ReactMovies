@@ -1,31 +1,22 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import Row from './Row'
+import movies from './requests'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <h1 Class='text-center'>Hey Clever Programmer!, Let's Bulid Netflex</h1>
+      <Row title='Trending Now' fetchUrl={movies.fetchTrending}/>
+      <Row title='Popular' fetchUrl={movies.fetchPopular}/>
+      <Row title='Top Reated' fetchUrl={movies.fetchTopReated}/>
+      <Row title='Up Coming' fetchUrl={movies.fetchUpComing}/>
     </div>
+    
   );
 }
 
-function sayHello(){
-  return <h1>Hello World</h1>;
-}
 
-export default sayHello;
+export default App;
 
 //export default App;

@@ -2,13 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import sayHello from './App';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  sayHello(),
-  document.getElementById('root')
-);
+ const root = document.querySelector('#root')
+
+
+/* { <React.StrictMode>
+    <App />
+</React.StrictMode> } */
+
+ReactDOM.render(App(), root)
+
+/*const element = React.createElement('h2', {
+  //children: 'Txt Content',
+  children: ['TextContentOne', ' textContentTow', ' thirdText'],
+  className: 'container col'
+})
+
+ */
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
@@ -16,6 +27,3 @@ ReactDOM.render(
 reportWebVitals();
 
 
-{/* <React.StrictMode>
-    <App />
-</React.StrictMode> */}
