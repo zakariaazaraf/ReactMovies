@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import axios from './axios' // this is an alias of instance, not axios
-const imageUrl = 'https://image.tmdb.org/t/p/original'
+const imageUrl = 'https://image.tmdb.org/t/p/w500'
 
 function Row({title, fetchUrl}){
     const [movies, setMovies] = useState([])
@@ -20,10 +20,10 @@ function Row({title, fetchUrl}){
 
     console.log(movies)
     return (
-        <div className='container-fluid'>
+        <div className='-fluid'>
             <h2>{title}</h2>
-            <div className='row'>
-                {movies.map(item => <div className="col-sm-6"><img src={`${imageUrl}${item.backdrop_path}`} alt={item.title}></img></div>)}
+            <div className='posts'>
+                {movies.map(item => <img className='post' src={`${imageUrl}${item.backdrop_path}`} alt={item.title}></img>)}
             </div>
         </div>
     );
